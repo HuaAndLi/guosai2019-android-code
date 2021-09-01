@@ -1,0 +1,11 @@
+package utils;
+
+import android.os.Handler;
+
+public class MyUtils {
+	public static Handler mHandler = new Handler();
+	public static double temp, humidity, ill, smoke, gas, co2, pm25, airp,
+			statehuman;
+	public static double[] values = new double[9];
+	public static CMD alert, curtain, lamp, fan, tv, air, dvd, door;
+}

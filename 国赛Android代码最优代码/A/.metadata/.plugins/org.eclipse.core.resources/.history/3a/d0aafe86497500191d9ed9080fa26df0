@@ -1,0 +1,21 @@
+package utils;
+
+import java.util.concurrent.Executors;
+
+public class CMD {
+	public String name;
+	public String channel;
+	public String cmdon;
+	public String cmdoff;
+	public String isCheck;
+	private static ExecutorService pool = Executors.newSingleThreadExecutor();
+	public CMD(String name, String channel, String cmdon, String cmdoff) {
+		super();
+		this.name = name;
+		this.channel = channel;
+		this.cmdon = cmdon;
+		this.cmdoff = cmdoff;
+	}
+	
+	private static 
+}

@@ -1,0 +1,397 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".ModeActivity" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:layout_x="80dp"
+        android:layout_y="-1dp"
+        android:src="@drawable/mode" />
+
+    <CheckBox
+        android:id="@+id/cb_mode"
+        android:layout_width="50dp"        android:layout_height="30dp"
+        android:layout_x="930dp"
+        android:layout_y="47dp"
+        android:background="@drawable/cbss"
+        android:button="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="17dp"
+        android:layout_y="153dp"
+        android:text="执行条件"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="23dp"
+        android:layout_y="352dp"
+        android:text="执行动作"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="128dp"
+        android:layout_y="169dp"
+        android:text="传感器"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="50dp"
+        android:layout_x="232dp"
+        android:layout_y="157dp" >
+
+        <CheckBox
+            android:id="@+id/cbv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="温度"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="湿度"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="光照"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="烟雾"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="燃气"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="co2"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="pm25"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="气压"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cbv9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="人体红外"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_x="228dp"
+        android:layout_y="221dp" >
+
+        <CheckBox
+            android:id="@+id/cb_s1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="大于"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_s2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="小于"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="130dp"
+        android:layout_y="232dp"
+        android:text="条件"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="131dp"
+        android:layout_y="282dp"
+        android:text="阈值"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_x="230dp"
+        android:layout_y="279dp"
+        android:background="@drawable/cbmode"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:textColor="#fff" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="141dp"
+        android:layout_y="375dp"
+        android:text="动作"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_x="213dp"
+        android:layout_y="362dp" >
+
+        <CheckBox
+            android:id="@+id/cb_o1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="打开"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_o2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="146dp"
+        android:layout_y="465dp"
+        android:text="设备"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="50dp"
+        android:layout_x="214dp"
+        android:layout_y="457dp" >
+
+        <CheckBox
+            android:id="@+id/cb_c1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="报警灯"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_c2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="窗帘"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_c3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="射灯"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_c4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="风扇"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_c5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="电视"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_c6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="空调"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_c7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="dvd"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/cb_c8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cbmode"
+            android:button="@null"
+            android:gravity="center"
+            android:text="门禁"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="362dp"
+        android:layout_y="38dp"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+</AbsoluteLayout>

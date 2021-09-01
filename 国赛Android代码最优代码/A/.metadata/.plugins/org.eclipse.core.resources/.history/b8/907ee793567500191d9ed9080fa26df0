@@ -1,0 +1,149 @@
+package com.example.smarthome;
+
+import utils.CMD;
+import utils.MyUtils;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class MainActivity extends Activity implements Runnable {
+	private TextView[] tvs = new TextView[9];
+	private boolean isDestroy;
+	private CheckBox cbAlert;
+	private CheckBox cbLamp;
+	private CheckBox cbDoor;
+	private CheckBox cbFan;
+	private Spinner sp1;
+	private Spinner sp2;
+	private Spinner sp3;
+	private EditText etNumber;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		tvs[0] = (TextView) findViewById(R.id.tv1);
+		tvs[1] = (TextView) findViewById(R.id.tv2);
+		tvs[2] = (TextView) findViewById(R.id.tv3);
+		tvs[3] = (TextView) findViewById(R.id.tv4);
+		tvs[4] = (TextView) findViewById(R.id.tv5);
+		tvs[5] = (TextView) findViewById(R.id.tv6);
+		tvs[6] = (TextView) findViewById(R.id.tv7);
+		tvs[7] = (TextView) findViewById(R.id.tv8);
+		tvs[8] = (TextView) findViewById(R.id.tv9);
+		cbAlert = (CheckBox) findViewById(R.id.cb_alert);
+		cbLamp = (CheckBox) findViewById(R.id.cb_lamp);
+		cbDoor = (CheckBox) findViewById(R.id.cb_door);
+		cbFan = (CheckBox) findViewById(R.id.cb_fan);
+		sp1 = (Spinner) findViewById(R.id.spinner1);
+		sp2 = (Spinner) findViewById(R.id.spinner2);
+		sp3 = (Spinner) findViewById(R.id.spinner3);
+		etNumber = (EditText) findViewById(R.id.et_number);
+		sp1.setAdapter(new ArrayAdapter<String>(MainActivity.this,
+				android.R.layout.simple_list_item_1,
+				new String[] { "温度", "光照" }));
+		sp2.setAdapter(new ArrayAdapter<String>(MainActivity.this,
+				android.R.layout.simple_list_item_1, new String[] { ">", "<=" }));
+		sp3.setAdapter(new ArrayAdapter<String>(MainActivity.this,
+				android.R.layout.simple_list_item_1, new String[] { "风扇开",
+						"射灯开" }));
+		setControl(cbAlert, MyUtils.alert);
+		setControl(cbLamp, MyUtils.lamp);
+		setControl(cbDoor, MyUtils.door);
+		setControl(cbFan, MyUtils.fan);
+		findViewById(R.id.btn_conn).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(MainActivity.this, ConnActivity.class));
+			}
+		});
+		findViewById(R.id.btn_tv).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.tv.isCheck = true;
+				MyUtils.tv.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_air).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.air.isCheck = true;
+				MyUtils.air.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_dvd).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.dvd.isCheck = true;
+				MyUtils.dvd.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_kai).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.curtain.isCheck = false;
+				MyUtils.curtain.setControl(true);
+			}
+		});
+		findViewById(R.id.btn_guan).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.curtain.isCheck = true;
+				MyUtils.curtain.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_ting).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.curtain.setControl(null);
+			}
+		});
+		MyUtils.mHandler.post(this);
+	}
+
+	public void setControl(final CheckBox cb, final CMD cmd) {
+		cb.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView,
+					boolean isChecked) {
+				cmd.setControl(isChecked);
+			}
+		});
+	}
+
+	@Override
+	protected void onDestroy() {
+		isDestroy = true;
+		super.onDestroy();
+	}
+
+	@Override
+	public void run() {
+		for (int i = 0; i < tvs.length; i++) {
+			tvs[i].setText("" + MyUtils.values[i]);
+		}
+		tvs[8].setText("" + (MyUtils.statehuman != 0 ? "有人" : "无人"));
+		if (!isDestroy) {
+			MyUtils.mHandler.postDelayed(this, 3000);
+		}
+	}
+
+}

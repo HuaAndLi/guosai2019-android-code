@@ -1,0 +1,12 @@
+package utils;
+
+import android.app.Activity;
+import android.content.Intent;
+
+public class MyUtils {
+	public static void startActivity(Activity ac, Class c) {
+		Intent intent = new Intent(ac, c);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+				|| Intent.FLAG_ACTIVITY_CLEAR_TASK);
+	}
+}

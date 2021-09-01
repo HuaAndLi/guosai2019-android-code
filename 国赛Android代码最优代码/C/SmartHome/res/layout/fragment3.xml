@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <Spinner
+            android:id="@+id/sp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/sp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etminute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分"
+            android:textSize="25sp" />
+
+        <ToggleButton
+            android:id="@+id/tb_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="关闭联动"
+            android:textOn="停止联动" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Switch
+            android:id="@+id/sw_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="报警灯" />
+
+        <Switch
+            android:id="@+id/sw_fan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风扇" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Switch
+            android:id="@+id/sw_lamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="射灯" />
+
+        <Switch
+            android:id="@+id/sw_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="门禁" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textSize="25sp" />
+
+</LinearLayout>

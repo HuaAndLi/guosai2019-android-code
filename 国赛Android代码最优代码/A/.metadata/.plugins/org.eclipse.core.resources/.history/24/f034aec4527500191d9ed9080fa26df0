@@ -1,0 +1,110 @@
+package com.example.smarthome;
+
+import utils.CMD;
+import utils.MyUtils;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+public class MainActivity extends Activity implements Runnable {
+	private TextView[] tvs = new TextView[9];
+	private boolean isDestroy;
+	private CheckBox cbAlert;
+	private CheckBox cbLamp;
+	private CheckBox cbDoor;
+	private CheckBox cbFan;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		cbAlert = (CheckBox) findViewById(R.id.cb_alert);
+		cbLamp = (CheckBox) findViewById(R.id.cb_lamp);
+		cbDoor = (CheckBox) findViewById(R.id.cb_door);
+		cbFan = (CheckBox) findViewById(R.id.cb_fan);
+		setControl(cbAlert, MyUtils.alert);
+		setControl(cbLamp, MyUtils.lamp);
+		setControl(cbDoor, MyUtils.door);
+		setControl(cbFan, MyUtils.fan);
+		findViewById(R.id.btn_tv).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.tv.isCheck = true;
+				MyUtils.tv.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_air).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.air.isCheck = true;
+				MyUtils.air.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_dvd).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.dvd.isCheck = true;
+				MyUtils.dvd.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_kai).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.curtain.isCheck = true;
+				MyUtils.curtain.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_guan).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.curtain.isCheck = true;
+				MyUtils.curtain.setControl(false);
+			}
+		});
+		findViewById(R.id.btn_ting).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MyUtils.curtain.setControl(null);
+			}
+		});
+		MyUtils.mHandler.post(this);
+	}
+
+	public void setControl(final CheckBox cb, final CMD cmd) {
+		cb.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				boolean is = cb.isChecked();
+				cmd.isCheck = !is;
+				cmd.setControl(is);
+			}
+		});
+	}
+
+	@Override
+	protected void onDestroy() {
+		isDestroy = true;
+		super.onDestroy();
+	}
+
+	@Override
+	public void run() {
+		for (int i = 0; i < tvs.length; i++) {
+			tvs[i].setText("" + MyUtils.values[i]);
+		}
+		if (!isDestroy) {
+			MyUtils.mHandler.postDelayed(this, 3000);
+		}
+	}
+
+}

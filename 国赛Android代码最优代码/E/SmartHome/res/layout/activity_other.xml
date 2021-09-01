@@ -1,0 +1,187 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/al"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    tools:context=".OtherActivity" >
+
+    <CheckBox
+        android:id="@+id/cb_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="34dp"
+        android:layout_y="32dp"
+        android:text="模式控制："
+        android:textSize="25sp" />
+
+    <Switch
+        android:id="@+id/sw_isli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="48dp"
+        android:layout_y="80dp"
+        android:textOff="在家"
+        android:textOn="离家" />
+
+    <CheckBox
+        android:id="@+id/cb_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="31dp"
+        android:layout_y="133dp"
+        android:text="联动控制："
+        android:textSize="25sp" />
+
+    <Spinner
+        android:id="@+id/sp2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_x="128dp"
+        android:layout_y="184dp" />
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="221dp"
+        android:layout_y="197dp"
+        android:ems="5"
+        android:inputType="number"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/sp1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_x="35dp"
+        android:layout_y="185dp" />
+
+    <Spinner
+        android:id="@+id/sp3"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_x="345dp"
+        android:layout_y="189dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="352dp"
+        android:layout_y="259dp"
+        android:text="风扇"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/cb_zhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="33dp"
+        android:layout_y="271dp"
+        android:text="指令控制："
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="42dp"
+        android:layout_y="319dp"
+        android:text="设备名："
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="240dp"
+        android:layout_y="318dp"
+        android:text="动作："
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn_cun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="419dp"
+        android:layout_y="315dp"
+        android:text="存" />
+
+    <EditText
+        android:id="@+id/et_bian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="165dp"
+        android:layout_y="390dp"
+        android:ems="5"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_qu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="299dp"
+        android:layout_y="387dp"
+        android:text="取" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_x="565dp"
+        android:layout_y="47dp" >
+    </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="551dp"
+        android:layout_y="9dp"
+        android:text="运行日志："
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="551dp"
+        android:layout_y="221dp"
+        android:text="光照度绘制："
+        android:textSize="25sp" />
+
+    <com.example.smarthome.ChartView
+        android:id="@+id/chartView1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_x="711dp"
+        android:layout_y="254dp" />
+
+    <EditText
+        android:id="@+id/et_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="268dp"
+        android:layout_y="50dp"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/etz1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="133dp"
+        android:layout_y="323dp"
+        android:ems="5"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/etz2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="311dp"
+        android:layout_y="327dp"
+        android:ems="5"
+        android:singleLine="true" />
+
+</AbsoluteLayout>

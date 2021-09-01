@@ -1,0 +1,9 @@
+package utils;
+
+public class CMD {
+	public String name;
+	public String channel;
+	public String cmdon;
+	public String cmdoff;
+	public String isCheck;
+}

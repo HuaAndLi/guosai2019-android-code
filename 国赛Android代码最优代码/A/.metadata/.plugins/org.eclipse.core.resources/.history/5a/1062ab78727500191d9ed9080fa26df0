@@ -1,0 +1,11 @@
+package utils;
+
+import android.R.integer;
+import android.app.Activity;
+import android.content.Intent;
+
+public class MyUtils {
+	public static void startActivity(Activity ac, Class c) {
+		Intent intent = new Intent(ac,);
+	}
+}

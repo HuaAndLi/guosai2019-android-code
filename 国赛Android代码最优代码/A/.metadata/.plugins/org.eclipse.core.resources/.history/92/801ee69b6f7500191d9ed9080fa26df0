@@ -1,0 +1,18 @@
+package com.example.smarthome;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class BaseActivity extends Activity {
+	public static List<Activity> lists = new ArrayList<Activity>();
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		lists.add(this);
+	}
+}

@@ -1,0 +1,30 @@
+package com.example.smarthome;
+
+import utils.MyUtils;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.ProgressBar;
+
+public class LoadingActivity extends Activity implements Runnable {
+	private int number = 0;
+	private ProgressBar bar;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_loading);
+		MyUtils.init();
+		bar = (ProgressBar) findViewById(R.id.progressBar1);
+		MyUtils.mHandler.post(this);
+	}
+
+	@Override
+	public void run() {
+
+		if (number <= 100) {
+			MyUtils.mHandler.postDelayed(this, 100);
+		}
+	}
+
+}

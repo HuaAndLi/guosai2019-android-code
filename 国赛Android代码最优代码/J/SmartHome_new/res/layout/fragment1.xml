@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/al"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/f1"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1dp"
+        android:layout_y="1dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="62dp"
+        android:layout_y="93dp"
+        android:drawableTop="@drawable/temp"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="191dp"
+        android:layout_y="91dp"
+        android:drawableTop="@drawable/hum"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="315dp"
+        android:layout_y="91dp"
+        android:drawableTop="@drawable/ill"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="65dp"
+        android:layout_y="212dp"
+        android:drawableTop="@drawable/smoke"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="318dp"
+        android:layout_y="210dp"
+        android:drawableTop="@drawable/co2"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="194dp"
+        android:layout_y="210dp"
+        android:drawableTop="@drawable/gas"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="71dp"
+        android:layout_y="340dp"
+        android:drawableTop="@drawable/pm25"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="324dp"
+        android:layout_y="339dp"
+        android:drawableTop="@drawable/statehuman"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="199dp"
+        android:layout_y="342dp"
+        android:drawableTop="@drawable/airp"
+        android:text="00.00"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/cb_alert"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="498dp"
+        android:layout_y="45dp"
+        android:background="@drawable/selector_alert"
+        android:button="@null" />
+
+    <CheckBox
+        android:id="@+id/cb_door"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="625dp"
+        android:layout_y="46dp"
+        android:background="@drawable/selector_door"
+        android:button="@null" />
+
+    <CheckBox
+        android:id="@+id/cb_lamp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="746dp"
+        android:layout_y="44dp"
+        android:background="@drawable/selector_lamp"
+        android:button="@null" />
+
+    <CheckBox
+        android:id="@+id/cb_fan"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="863dp"
+        android:layout_y="41dp"
+        android:background="@drawable/selector_fan"
+        android:button="@null" />
+
+    <ImageView
+        android:id="@+id/iv_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="612dp"
+        android:layout_y="152dp"
+        android:src="@drawable/cl" />
+
+    <Button
+        android:id="@+id/btn_ting"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="666dp"
+        android:layout_y="218dp"
+        android:background="@drawable/ting" />
+
+    <Button
+        android:id="@+id/btn_guan"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="817dp"
+        android:layout_y="219dp"
+        android:background="@drawable/guan" />
+
+    <Button
+        android:id="@+id/btn_kai"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="502dp"
+        android:layout_y="216dp"
+        android:background="@drawable/kai" />
+
+    <ImageView
+        android:id="@+id/iv_hw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="633dp"
+        android:layout_y="319dp"
+        android:src="@drawable/hw" />
+
+    <CheckBox
+        android:id="@+id/cb_tv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="516dp"
+        android:layout_y="372dp"
+        android:background="@drawable/selector_tv"
+        android:button="@null"
+        android:drawableTop="@drawable/i1" />
+
+    <CheckBox
+        android:id="@+id/cb_dvd"
+        android:layout_width="80dp"
+        android:layout_height="80dp" 
+        android:layout_x="691dp"
+        android:layout_y="374dp"
+        android:background="@drawable/selector_dvd"
+        android:button="@null"
+        android:drawableTop="@drawable/i2" />
+
+    <CheckBox
+        android:id="@+id/cb_air"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_x="848dp"
+        android:layout_y="369dp"
+        android:background="@drawable/selector_air"
+        android:button="@null"
+        android:drawableTop="@drawable/i3" />
+
+</AbsoluteLayout>

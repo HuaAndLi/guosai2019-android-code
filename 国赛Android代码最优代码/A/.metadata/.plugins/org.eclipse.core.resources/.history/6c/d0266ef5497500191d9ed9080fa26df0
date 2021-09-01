@@ -1,0 +1,7 @@
+package utils;
+
+import android.os.Handler;
+
+public class MyUtils {
+	public static Handler mHandler = new Handler();
+}
